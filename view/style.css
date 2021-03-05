@@ -1,0 +1,58 @@
+.collection_box .webix_dataview_item, .collection_box .webix_dataview_item:focus {
+    border-width: 0;
+    outline: none;
+
+}
+
+.collection_box .webix_dataview_item > div {
+    box-shadow: 5px 5px 5px grey;
+    margin: 10px;
+    padding: 10px
+}
+
+.collection_box .block {
+    clear: both;
+    text-align: center;
+}
+
+button {
+    border-radius: 0;
+    width: 100%;
+    text-align: center;
+    background-color: aqua;
+    padding: 0 5px;
+}
+
+.sidebar {
+    background-color: black;
+}
+
+.registration_error_label {
+    color: red;
+}
+
+.login_error_label {
+    color: red;
+}
+
+.some {
+    width: 30%;
+    height: 30%;
+}
+
+.kanban {
+    background-color: black;
+}
+
+.form {
+    height: 300px;
+}
+
+.module p {
+    word-break: break-all
+}
+
+.content {
+    height: 80%;
+    overflow: scroll;
+}
