@@ -15,21 +15,26 @@ var sign_in_form = ({
         },
         {
             view: "button", value: "Login", css: "webix_primary",
-            click: async function () {
+            click:  function () {
                 if (this.getParentView().validate()) {
                     $$('log_error').setValue('');
                     let login = $$('user_login').getValue();
                     let password = $$('user_password').getValue();
-
-                    let user = { login: login, password: password };
-                    let jwt = await api.loginUser(user);
-                    if (jwt.status===200) {
-                        let jwtData = await jwt.json();
-                        localStorage.setItem('jwt', jwtData)
-                        action.afterUserLogin()
-                    } else {
-                        $$('log_error').setValue('Incorrect login or password');
-                    }
+                    (
+                        async ()=> {
+                            let user = {login: login, password: password};
+                            let jwt = await api.loginUser(user);
+                            if (jwt.status === 200) {
+                                let jwtData = await jwt.json();
+                                console.log('set token')
+                                location.reload()
+                                localStorage.setItem('jwt', jwtData)
+                                action.afterUserLogin()
+                            } else {
+                                $$('log_error').setValue('Incorrect login or password');
+                            }
+                        }
+                )()
                 }
 
             }

@@ -53,6 +53,6 @@ button {
 }
 
 .content {
-    height: 80%;
+    height: 250px;
     overflow: scroll;
 }

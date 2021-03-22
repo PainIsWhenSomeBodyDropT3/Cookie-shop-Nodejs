@@ -6,7 +6,7 @@ module.exports =(Sequelize , sequelize)=>{
             Status: {type: Sequelize.STRING, allowNull: false},
             Description: {type: Sequelize.STRING, allowNull: false},
             PathToImg: {type: Sequelize.STRING, allowNull: false},
-            CollectionId: {type: Sequelize.INTEGER, allowNull: false, references: {model: Collection(Sequelize,sequelize), key: 'Id'}}
+            CollectionId: {type: Sequelize.INTEGER, allowNull: false, references: {model: Collection(Sequelize,sequelize), key: 'Id'}},
         },
         {
             sequelize,

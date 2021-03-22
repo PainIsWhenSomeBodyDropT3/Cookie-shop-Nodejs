@@ -78,6 +78,7 @@ var sign_up_form = ({
                     if (is_registered_json.status!==200) {
                         $$('reg_error').setValue('This user has already exist');
                     } else {
+                        console.log(user)
                         await api.registerUser(user);
                         $$('sign_in_up_multiview').setValue('sing_in')
                     }
